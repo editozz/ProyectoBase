@@ -226,11 +226,6 @@ flowchart TB
 | **Stellar** | Ledger | Histórico inmutable de créditos |
 | **Stellar** | Horizon API | Consulta pública para verificadores |
 
-| Capa | Componente | Qué hace |
-| :---: | --- | --- |
-| Interfaz | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Lógica | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Stellar | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
 
 **En qué punto entra la red:** 
 

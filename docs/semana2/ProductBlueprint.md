@@ -143,7 +143,7 @@ Un piloto con una sola institución y un solo programa ya genera evidencia sufic
 
 > Lienzo de una página con el modelo del producto. Extensión: enlace (obligatorio).
 
-**Enlace al Lean Canvas (obligatorio):** [Lean Canvas del proyecto](https://escriban-aqui-el-enlace)
+**Enlace al Lean Canvas (obligatorio):** [Lean Canvas del proyecto](https://github.com/editozz/Proyecto_Academico_Blockchain/blob/main/docs/semana2/LeanCanvas.md)
 
 El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única, solución, canales, métricas clave, ventaja diferencial y estructura de costos e ingresos.
 
@@ -153,7 +153,7 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 > Enlace al tablero en GitHub Projects, construido con las historias priorizadas, en columnas y con criterios de aceptación por tarjeta. Extensión: enlace al tablero (obligatorio).
 
-**Enlace al tablero (obligatorio):** [Tablero Kanban en GitHub Projects](https://github.com/users/usuario/projects/1)
+**Enlace al tablero (obligatorio):** [Tablero Kanban en GitHub Projects](https://github.com/users/editozz/projects/4)
 
 ---
 

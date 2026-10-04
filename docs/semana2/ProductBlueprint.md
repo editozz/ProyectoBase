@@ -101,7 +101,9 @@ Si el registro mismo es verificable, inmutable y permanente, las consecuencias (
 
 **En qué se diferencia de cómo lo resuelve hoy:**
 
-En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.<br><br>Según el [Ministerio de Educación Nacional](https://www.mineducacion.gov.co), para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente". Esto significa que la confianza sigue concentrada en la institución de origen.
+En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.
+
+Según el [Ministerio de Educación Nacional](https://www.mineducacion.gov.co), para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente". Esto significa que la confianza sigue concentrada en la institución de origen.
 ---
 
 ## 3. Flujo de usuario

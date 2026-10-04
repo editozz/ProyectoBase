@@ -94,7 +94,7 @@ Si el registro mismo es verificable, inmutable y permanente, las consecuencias (
 **En qué se diferencia de cómo lo resuelve hoy:** 
 En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.
 
-***Según el Ministerio de Educación, para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente" . Esto significa que la confianza sigue concentrada en la institución de origen***.
+Según el Ministerio de Educación, para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente" . Esto significa que la confianza sigue concentrada en la institución de origen
 ---
 
 ## 3. Flujo de usuario
@@ -121,22 +121,9 @@ En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican 
 > Funcionalidad central separada de la deseable que queda fuera. Justificación de por qué el recorte sigue entregando valor. Extensión: 150–300 palabras en total.
 
 | Dentro del MVP (funcionalidad central) | Fuera del MVP (deseable, para después) |
-
-**Dentro del MVP:** 
-el producto se concentra en cuatro funciones que atacan directamente la causa raíz del problema. 
-Primero, el **registro de créditos aprobados** por parte del coordinador académico al cierre del periodo, con materia, nota, fecha y periodo. 
-Segundo, la **firma digital institucional** de cada crédito, que garantiza autenticidad e inmutabilidad. 
-Tercero, el **panel del estudiante**, donde consulta su trayectoria y decide qué compartir mediante un enlace o código único. Cuarto, el **verificador público**, donde la institución receptora o el empleador confirma la autenticidad de un crédito sin contactar a la institución de origen.
-
-**Fuera del MVP:** 
-quedan para después la integración masiva con sistemas internos, la gestión de múltiples llaves por facultad, la aplicación móvil nativa, los smart contracts de homologación automática, la integración con el MEN y el reconocimiento de educación continua.
-
-**Por qué el recorte sigue entregando valor:** 
-el MVP ya permite que la institución **demuestre de forma verificable y permanente** lo que certificó, y que el estudiante **transporte su trayectoria** cuando se transfiere. 
-Eso resuelve el núcleo del problema: la fragilidad del registro y la dependencia de la institución de origen para verificar. 
-Las funciones dejadas fuera son mejoras de escala, comodidad o alcance, pero no son necesarias para demostrar que el modelo funciona. 
-Un piloto con una sola institución y un solo programa ya genera evidencia suficiente para validar la hipótesis y justificar la siguiente fase.
 | --- | --- |
+| El producto se concentra en cuatro funciones que atacan la causa raíz del problema.<br><br>**1. Registro de créditos aprobados:** el coordinador académico registra cada crédito al cierre del periodo, con materia, nota, fecha y periodo.<br><br>**2. Firma digital institucional:** cada crédito queda sellado con la llave de la institución, garantizando autenticidad e inmutabilidad.<br><br>**3. Panel del estudiante:** consulta su trayectoria y decide qué compartir mediante un enlace o código único.<br><br>**4. Verificador público:** la institución receptora o el empleador confirma la autenticidad de un crédito sin contactar a la institución de origen. | Quedan para después:<br><br>• Integración masiva con sistemas internos.<br>• Gestión de múltiples llaves por facultad.<br>• Aplicación móvil nativa.<br>• Smart contracts de homologación automática.<br>• Integración con el MEN.<br>• Reconocimiento de educación continua. |
+
 ---
 
 ## 5. Lean Canvas

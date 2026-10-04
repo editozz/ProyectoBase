@@ -94,7 +94,7 @@ Si el registro mismo es verificable, inmutable y permanente, las consecuencias (
 **En qué se diferencia de cómo lo resuelve hoy:** 
 En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.
 
-Según el Ministerio de Educación, para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente" . Esto significa que la confianza sigue concentrada en la institución de origen.
+***Según el Ministerio de Educación, para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente" . Esto significa que la confianza sigue concentrada en la institución de origen***.
 ---
 
 ## 3. Flujo de usuario
@@ -169,7 +169,37 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 | Lógica | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
 | Stellar | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
 
-**En qué punto entra la red:** Escriban aquí su respuesta.
+**En qué punto entra la red:** 
+
+**Capa de Interfaz (Frontend)**
+Es lo que el usuario ve y usa. No sabe que existe Stellar; solo interactúa con pantallas.
+
+Interfaz	Quién la usa	Qué hace
+
+Panel institucional	Coordinador y secretario académico	Registra créditos, firma digitalmente
+Panel del estudiante	Estudiante	Consulta su trayectoria, comparte con enlace único
+Verificador público	Institución receptora, empleador	Consulta autenticidad de un crédito
+Punto de entrada a la red: ninguno. El frontend nunca habla directamente con Stellar.
+
+**Capa de Lógica (Backend)**
+Es el intermediario entre la interfaz y la red. Aquí vive la inteligencia del sistema.
+
+Servicio	Qué hace	¿Habla con Stellar?
+API de registro	Valida que el crédito tenga materia, nota, fecha, periodo	No directamente; pasa al servicio de firma
+Servicio de firma	Firma el crédito con la llave institucional	Sí construye la transacción Stellar
+Servicio de verificación	Consulta si un crédito es auténtico	Sí consulta Horizon API
+Base de datos local	Guarda caché y metadatos para consultas rápidas	No
+Punto de entrada a la red: el servicio de firma y el servicio de verificación son los únicos que se comunican con Stellar.
+
+**Red Stellar**
+Aquí es donde ocurre la magia: el registro inmutable.
+
+Componente	Qué es	Qué hace
+Cuenta institucional	Par de llaves (pública/privada) de la universidad	Firma las transacciones
+Transacción de registro	Operación en Stellar que contiene el crédito	Se envía a la red
+Ledger	Libro contable distribuido	Almacena el histórico inmutable
+Horizon API	Interfaz pública de consulta	Permite verificar sin contactar a la institución
+Punto exacto donde entra la red: cuando el servicio de firma construye una transacción y la envía a Stellar. A partir de ese momento, el crédito queda registrado de forma permanente e inalterable. Cualquier verificación posterior consulta el Ledger a través de Horizon API, sin necesidad de contactar a la institución de origen.
 
 ---
 
@@ -177,9 +207,30 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 > Qué componentes de Stellar usaría y por qué cada uno. Apoyado en el criterio de pertinencia del Problem Brief. Extensión: 150–300 palabras en total.
 
-**Criterio de pertinencia (del Problem Brief):** Escriban aquí el criterio en el que se apoyan.
+**Criterio de pertinencia (del Problem Brief):** 
+En el proyecto para la trazabilidad de créditos académicos en Stellar, los componentes que necesitas se dividen en tres capas: el contrato inteligente (Soroban), la identidad criptográfica (llaves y cuentas) y la capa de consulta (Horizon). Aquí te explico cada uno y por qué corresponde a tu criterio de pertinencia.
 
 | Componente de Stellar | Para qué lo usamos | Por qué ese y no otra alternativa |
 | --- | --- | --- |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
+
+Capa de Contrato: Soroban
+El corazón de tu sistema sería un contrato inteligente en Soroban, la plataforma de contratos de Stellar.
+
+Se exige un histórico inalterable y la eliminación de un intermediario que concentra la confianza. Soroban te permite codificar las reglas de emisión y verificación directamente en la cadena, de modo que ninguna institución pueda modificar retroactivamente un crédito aprobado
+
+Emitir credenciales: Crear un activo digital (no transferible) que represente el crédito aprobado. Esto sigue el estándar W3C Verifiable Credentials 2.0, que ya está maduro para el sector educativo .
+
+Almacenar el esquema: Guardar la estructura del crédito (materia, nota, fecha, institución) para que sea interoperable .
+
+Revocar credenciales: Añadir una función para que la institución pueda invalidar un crédito si hubo un error, dejando rastro de la revocación 
+
+Capa de Identidad y Autorización: Llaves Ed25519 y Cuentas de Contrato
+Aquí es donde resides la seguridad y la eliminación de la confianza en un tercero.
+
+Stellar usa Ed25519 de forma nativa para firmar transacciones . Tu criterio de pertinencia exige que partes que no confían entre sí compartan un registro. Con Ed25519, la institución firma cada crédito con su llave privada. Cualquier verificador puede comprobar la firma contra la llave pública de la institución sin necesitar su permiso
+Qué pasa si un crédito requiere varias firmas (ej. secretario y decano)?
+Para eso sirve la Abstracción de Cuentas y la función __check_auth de Soroban . Puedes crear una Cuenta de Contrato para la institución. En lugar de que una sola llave controle todo, programas el contrato para que require_auth verifique que se han proporcionado al menos N firmas de una lista de autoridades. Esto refleja exactamente el flujo burocrático real de una universidad
+
+Capa de Consulta y Verificación: Horizon API
+Para que el estudiante o el empleador verifiquen un crédito sin contactar a la universidad, necesitas una puerta de entrada pública a los datos.
+Horizon es la API HTTP que indexa y sirve los datos de la red Stellar . Tu criterio de pertinencia exige eliminar al intermediario que concentra la confianza (la oficina de registro). Horizon te permite construir un Verificador Público: un sitio web donde un tercero pega el ID del crédito y Horizon le devuelve la información directamente de la cadena, sin que la universidad tenga que intervenir

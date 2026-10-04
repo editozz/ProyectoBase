@@ -121,7 +121,7 @@ En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican 
 > Funcionalidad central separada de la deseable que queda fuera. Justificación de por qué el recorte sigue entregando valor. Extensión: 150–300 palabras en total.
 
 | Dentro del MVP (funcionalidad central) | Fuera del MVP (deseable, para después) |
-| --- | --- |
+
 **Dentro del MVP:** 
 el producto se concentra en cuatro funciones que atacan directamente la causa raíz del problema. 
 Primero, el **registro de créditos aprobados** por parte del coordinador académico al cierre del periodo, con materia, nota, fecha y periodo. 
@@ -136,7 +136,7 @@ el MVP ya permite que la institución **demuestre de forma verificable y permane
 Eso resuelve el núcleo del problema: la fragilidad del registro y la dependencia de la institución de origen para verificar. 
 Las funciones dejadas fuera son mejoras de escala, comodidad o alcance, pero no son necesarias para demostrar que el modelo funciona. 
 Un piloto con una sola institución y un solo programa ya genera evidencia suficiente para validar la hipótesis y justificar la siguiente fase.
-
+| --- | --- |
 ---
 
 ## 5. Lean Canvas

@@ -164,6 +164,8 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 **Diagrama (imagen o enlace):** docs/semana2/Diagrama.md
 # Diagrama de conexión — Interfaz, Lógica y Stellar
 
+# Diagrama de conexión — Interfaz, Lógica y Stellar
+
 ```mermaid
 flowchart TB
     subgraph USUARIO["Usuario"]
@@ -211,6 +213,19 @@ flowchart TB
     C3 --> D4
     C4 -.-> C1
     C4 -.-> C3
+```
+
+## Tabla de capas
+
+| Capa | Componente | Qué hace |
+| :---: | --- | --- |
+| **Interfaz** | Panel institucional | Registra créditos aprobados |
+| **Interfaz** | Panel del estudiante | Consulta y comparte trayectoria |
+| **Interfaz** | Verificador público | Confirma autenticidad sin contactar a la institución |
+| **Lógica** | Servicio de firma | Firma créditos con llave institucional |
+| **Lógica** | Servicio de verificación | Consulta el ledger para validar |
+| **Stellar** | Ledger | Histórico inmutable de créditos |
+| **Stellar** | Horizon API | Consulta pública para verificadores |
 
 | Capa | Componente | Qué hace |
 | :---: | --- | --- |

@@ -122,3 +122,4 @@ Una base de datos tradicional o una integración entre sistemas no resuelven los
 
 **Qué invalidaría la hipótesis:** Si el MEN no reconoce los registros distribuidos, o si las instituciones se niegan a adoptar el estándar, o si los verificadores siguen exigiendo documentos físicos por desconfianza o costumbre, el valor de la solución se reduce drásticamente.
 
+Edilberto Torres Ortiz 2026

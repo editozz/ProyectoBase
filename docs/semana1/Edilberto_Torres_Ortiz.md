@@ -34,3 +34,4 @@ Escribe aquí tu respuesta.
 
 Un registro distribuido permitiría que la institución **demuestre de forma permanente e inalterable** lo que certificó, sin depender de que sus sistemas internos sobrevivan al tiempo. La inmutabilidad protegería a la institución de acusaciones de alteración, y la verificabilidad independiente liberaría a la institución de tener que responder cada solicitud de confirmación. Es una hipótesis personal, no una certeza: creo que blockchain aporta porque ataca la raíz del problema (la fragilidad del registro), no solo sus síntomas.
 
+Edilberto Torres Ortiz 2026

@@ -161,7 +161,13 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 > Cómo se conectan las partes (interfaz, lógica, Stellar) y en qué punto entra la red. Diagrama simple en imagen. Extensión: 150–300 palabras en total.
 
-**Diagrama (imagen o enlace):** docs/semana2/Diagrama.md.
+**Diagrama (imagen o enlace):** docs/semana2/Diagrama.md
+```mermaid
+flowchart TB
+    A[Usuario] --> B[Interfaz]
+    B --> C[Lógica]
+    C --> D[Stellar]
+```
 
 | Capa | Componente | Qué hace |
 | :---: | --- | --- |

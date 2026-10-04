@@ -61,40 +61,47 @@ para [**responder a auditorías internas o requerimientos del Ministerio de Educ
 
 > Qué resultado obtiene el usuario y por qué elegiría esta solución. En qué se diferencia de cómo resuelve hoy. Conecta con el usuario del Problem Brief. Extensión: 150–300 palabras en total.
 
-**Usuario (del Problem Brief):** 
-La institución de educación superior es quien tiene el problema de raí­z: Porque tiene la obligación legal y académica de certificar los créditos que aprueba un estudiante, pero no cuenta con un mecanismo que le permita demostrar, años después, que esos créditos fueron efectivamente aprobados. Se evidencia cuando un egresado solicita su historial, cuando otra universidad pide verificar un certificado, o cuando un empleador duda de la autenticidad de un diploma. En esas situaciones, la institución debe reconstruir la evidencia impidiendo la manipulación desde sus sistemas internos, que pueden haber cambiado, migrado o perdido información. El estudiante también lo sufre de manera directa, como consecuencia: cuando se transfiere entre programas o instituciones, su trayectoria no viaja con él. Los créditos aprobados se demuestran con certificados en papel o PDF que son estáticos, vulnerables y difíciles de verificar. El resultado es que repite cursos ya aprobados, enfrenta homologaciones que tardan semanas o meses, y asume costos en dinero, tiempo y oportunidades.
+**Usuario (del Problem Brief):**
 
-**Resultado que obtiene:** 
-La institución puede demostrar de forma verificable y permanente los créditos que certifica, y la trayectoria del estudiante viaja con él.
+La institución de educación superior es quien tiene el problema de raíz: tiene la obligación legal y académica de certificar los créditos que aprueba un estudiante, pero no cuenta con un mecanismo que le permita demostrar, años después, que esos créditos fueron efectivamente aprobados. Esto se hace visible cuando un egresado solicita su historial, cuando otra universidad pide verificar un certificado, o cuando un empleador duda de la autenticidad de un diploma. En esas situaciones, la institución debe reconstruir la evidencia desde sus sistemas internos, sin poder garantizar que esa evidencia no haya sido manipulada, y enfrentando el riesgo de que los sistemas hayan cambiado, migrado o perdido información.
 
-**Por institución:**
-- Registro permanente, inalterable y verificable de su labor certificadora.
+El estudiante también lo sufre de manera directa, como consecuencia: cuando se transfiere entre programas o instituciones, su trayectoria no viaja con él. Los créditos aprobados se demuestran con certificados en papel o PDF que son estáticos, vulnerables y difíciles de verificar. El resultado es que repite cursos ya aprobados, enfrenta homologaciones que tardan semanas o meses, y asume costos en dinero, tiempo y oportunidades.
+
+**Resultado que obtiene:**
+
+- **La institución** puede demostrar de forma verificable y permanente los créditos que certifica.
+- **El estudiante** puede transportar su trayectoria académica cuando se transfiere.
+
+**Para la institución:**
+- Registro permanente, auditable e inalterable de su labor certificadora.
 - Elimina la reconstrucción manual de historiales.
 - Libera al personal de responder una por una las solicitudes de verificación.
 - Reduce el riesgo reputacional de no poder demostrar lo que certificó.
 - Ofrece verificación instantánea como servicio a egresados, empleadores e instituciones.
 
-**Por estudiante:**
+**Para el estudiante:**
 - Portabilidad de su trayectoria académica de por vida.
 - No repite cursos ya aprobados.
 - Homologaciones más rápidas y transparentes.
-- Ahorro en dinero, tiempo y oportunidades.
+- Ahorro en dinero y tiempo, y recuperación de oportunidades perdidas.
 
-**Por institución receptora y empleadores:**
+**Para la institución receptora y los empleadores:**
 - Verificación independiente sin contactar a la institución de origen.
 - Confianza en la autenticidad de los créditos sin depender de PDFs vulnerables.
 
-**Por qué elegiría esta solución:** 
-Por ser una decisión estratégica frente a un problema estructural.
-Emitir certificados más rápido
-Digitalizar PDFs con firma electrónica
-Crear portales de verificación
-Si el registro mismo es verificable, inmutable y permanente, las consecuencias (repetir cursos, homologaciones lentas, costos) se reducen drásticamente
+**Por qué elegiría esta solución:**
 
-**En qué se diferencia de cómo lo resuelve hoy:** 
-En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.
+Porque es una decisión estratégica frente a un problema estructural. Las alternativas habituales —emitir certificados más rápido, digitalizar PDFs con firma electrónica o crear portales de verificación— atacan los síntomas, no la causa raíz:
 
-Según el Ministerio de Educación, para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente" . Esto significa que la confianza sigue concentrada en la institución de origen
+- **Emitir certificados más rápido** no resuelve la fragilidad del registro, solo acelera un documento que sigue siendo vulnerable.
+- **Digitalizar PDFs con firma electrónica** mantiene un documento estático que depende de que la institución esté disponible para verificarlo.
+- **Crear portales de verificación** concentra la confianza en la institución de origen, que sigue siendo el único verificador posible.
+
+Si el registro mismo es verificable, inmutable y permanente, las consecuencias (repetir cursos, homologaciones lentas, costos) se reducen drásticamente.
+
+**En qué se diferencia de cómo lo resuelve hoy:**
+
+En el alcance de la trazabilidad. Las soluciones actuales en Colombia verifican títulos o diplomas al momento de la graduación, mientras que TrayectoriaVerificada registra cada crédito aprobado a lo largo de toda la trayectoria académica del estudiante.<br><br>Según el [Ministerio de Educación Nacional](https://www.mineducacion.gov.co), para verificar un título "se debe acudir directamente a la institución de educación superior que lo expidió, que es la responsable de llevar el registro correspondiente". Esto significa que la confianza sigue concentrada en la institución de origen.
 ---
 
 ## 3. Flujo de usuario
